@@ -13,7 +13,10 @@ export const Home = () => {
       setError(null);
       try {
         const filmsData = await getFilms();
-        setFilms(filmsData);
+        const sortedFilms = filmsData.sort((a, b) =>
+          a.title.localeCompare(b.title),
+        );
+        setFilms(sortedFilms);
       } catch (erro) {
         setError("Erro ao buscar filmes");
       } finally {
@@ -31,7 +34,8 @@ export const Home = () => {
     return <p>{error}</p>;
   }
 
-    return (<div>
+  return (
+    <div>
       <h1>Filmes do Studio Ghibli</h1>
       <ul>
         {films.map((film) => (
@@ -41,5 +45,6 @@ export const Home = () => {
           </li>
         ))}
       </ul>
-    </div>);
+    </div>
+  );
 };
