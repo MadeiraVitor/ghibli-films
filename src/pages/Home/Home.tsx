@@ -28,7 +28,11 @@ export const Home = () => {
   }, []);
 
   if (loading) {
-    return <p>Carregando filmes...</p>;
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-slate-900">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-emerald-400 border-solid"></div>
+      </div>
+    );
   }
 
   if (error) {
