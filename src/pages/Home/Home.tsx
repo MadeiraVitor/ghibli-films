@@ -40,11 +40,11 @@ export const Home = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 px-6 py-10">
+    <div className="min-h-screen bg-slate-900 text-slate-100 px-6 py-5">
       <h1 className="text-4xl font-bold mb-10 text-center">
         Studio Ghibli Films
       </h1>
-      <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
         {films.map((film) => (
           <Link
             to={`/films/${film.id}`}
