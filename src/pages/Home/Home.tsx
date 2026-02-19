@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Film } from "../../types/Film";
 import { getFilms } from "../../services/ghibliApi";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const [films, setFilms] = useState<Film[]>([]);
@@ -39,10 +40,12 @@ export const Home = () => {
       <h1>Filmes do Studio Ghibli</h1>
       <ul>
         {films.map((film) => (
-          <li key={film.id}>
-            <h2>{film.title}</h2>
-            <p>{film.description}</p>
-          </li>
+          <Link to={`/films/${film.id}`} key={film.id}>
+            <li>
+              <h2>{film.title}</h2>
+              <img src={film.movie_banner} alt={film.title} />
+            </li>
+          </Link>
         ))}
       </ul>
     </div>
