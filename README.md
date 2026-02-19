@@ -44,7 +44,7 @@ Durante o desenvolvimento foram aplicados conceitos como:
 
 
 🚀 Deploy do projeto:
-<a href="https://product-registration-five.vercel.app/" target="_blank">Deploy</a>
+<a href="https://ghibli-films-gold.vercel.app/" target="_blank">Deploy</a>
 
 
 ---
